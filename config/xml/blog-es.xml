@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?><rss version="2.0" xml:base="https://www.prestashop.com/es/blog/feed.xml" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:og="http://ogp.me/ns#" xmlns:article="http://ogp.me/ns/article#" xmlns:book="http://ogp.me/ns/book#" xmlns:profile="http://ogp.me/ns/profile#" xmlns:video="http://ogp.me/ns/video#" xmlns:product="http://ogp.me/ns/product#" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
+  <channel>
+    <title>Blog Feed</title>
+    <link>https://www.prestashop.com/es/blog/feed.xml</link>
+    <description></description>
+    <language>es</language>
+     <atom:link href="https://www.prestashop.com/es/blog/feed.xml" rel="self" type="application/rss+xml" />
+      <item>
+    <title>¿Cómo hacer promociones y ofertas en tu eCommerce para aumentar las ventas?</title>
+    <link>https://www.prestashop.com/es/blog/como-hacer-promociones-ofertas</link>
+    <description>¿Quieres incrementar las ventas de tu negocio? ¿Has realizado promociones y ofertas pero has perdido más dinero de lo que has ganado?</description>
+     <pubDate>Mon, 06 Jul 2020 13:20:46 +0200</pubDate>
+ <dc:creator>Ismael Ruiz</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/como-hacer-promociones-ofertas</guid>
+  </item>
+  <item>
+    <title> Los módulos gratuitos que vienen de serie con PrestaShop y que el público desconoce</title>
+    <link>https://www.prestashop.com/es/blog/modulos-prestashop-de-serie</link>
+    <description>¿Sabías que cuando instalas PrestaShop en tu web tienen a tu disposición algunos módulos interesantes y gratuitos?</description>
+     <pubDate>Thu, 02 Jul 2020 15:48:57 +0200</pubDate>
+ <dc:creator>José Manuel Serna</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/modulos-prestashop-de-serie</guid>
+  </item>
+  <item>
+    <title>¿Cómo eliminar el ID de las URL&amp;#039;s en PrestaShop 1.7?  </title>
+    <link>https://www.prestashop.com/es/blog/eliminar-id-en-urls</link>
+    <description>¿Aún no sabes cómo quitar el ID que por defecto incluían las URL&#039;s en versiones de PrestaShop anteriores a la 1.7?</description>
+     <pubDate>Tue, 30 Jun 2020 23:21:19 +0200</pubDate>
+ <dc:creator>Alejandro Ramos</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/eliminar-id-en-urls</guid>
+  </item>
+  <item>
+    <title>La Tienda de los Minerales: caso de éxito de esta joyería personalizada con PrestaShop</title>
+    <link>https://www.prestashop.com/es/blog/la-tienda-de-los-minerales</link>
+    <description>¿Conoces La Tienda de los Minerales y el éxito que ha cosechado hasta ahora con su tienda PrestaShop?</description>
+     <pubDate>Sun, 28 Jun 2020 14:47:16 +0200</pubDate>
+ <dc:creator>Jorge González Marcos</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/la-tienda-de-los-minerales</guid>
+  </item>
+  <item>
+    <title>8 Módulos indispensables con los que prepararse para las rebajas de verano</title>
+    <link>https://www.prestashop.com/es/blog/modulos-rebajas-verano</link>
+    <description>El verano ya se ha instalado entre nosotros y sabes que implica que se avecina el período de rebajas y promociones de verano.</description>
+     <pubDate>Thu, 25 Jun 2020 20:55:22 +0200</pubDate>
+ <dc:creator>Jorge González Marcos</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/modulos-rebajas-verano</guid>
+  </item>
+  <item>
+    <title>7 Mejores plantillas para tu tienda de ordenadores online en PrestaShop</title>
+    <link>https://www.prestashop.com/es/blog/plantillas-tienda-ordenadores</link>
+    <description>¿Quieres montar un eCommerce para vender ordenadores y tecnología online?</description>
+     <pubDate>Thu, 25 Jun 2020 19:54:06 +0200</pubDate>
+ <dc:creator>Alejandro Ramos</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/plantillas-tienda-ordenadores</guid>
+  </item>
+  <item>
+    <title>¿Qué es la  segmentación de clientes y cómo te ayuda a aumentar el tráfico y las conversiones?</title>
+    <link>https://www.prestashop.com/es/blog/segmentacion-de-clientes</link>
+    <description>¿Segmentación de clientes? Si no sabes aún de qué te hablo, pero estás buscando estrategias para aumentar el tráfico y las conversiones en tu tienda, aquí te ofrecemos 5 consejos p</description>
+     <pubDate>Thu, 25 Jun 2020 18:11:52 +0200</pubDate>
+ <dc:creator>Jorge González Marcos</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/segmentacion-de-clientes</guid>
+  </item>
+  <item>
+    <title>El futuro del eCommerce: la persona antes que los datos</title>
+    <link>https://www.prestashop.com/es/blog/futuro-ecommerce</link>
+    <description>¿Te has planteado cuál es el futuro del eCommerce en la actualidad, sobre todo tras una situación como la que hemos vivido recientemente?</description>
+     <pubDate>Thu, 25 Jun 2020 06:57:07 +0200</pubDate>
+ <dc:creator>Jorge González Marcos</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/futuro-ecommerce</guid>
+  </item>
+  <item>
+    <title>¿Cómo empezar a vender en Marketplaces los productos de tu eCommerce?</title>
+    <link>https://www.prestashop.com/es/blog/como-vender-en-marketplaces</link>
+    <description>¿Tienes claro ya que quieres comenzar a vender tus productos en un Marketplace?</description>
+     <pubDate>Tue, 23 Jun 2020 18:09:36 +0200</pubDate>
+ <dc:creator>Jorge González Marcos</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/como-vender-en-marketplaces</guid>
+  </item>
+  <item>
+    <title>La segunda venta: ¿qué acciones llevar a cabo tras la primera venta en mi negocio?</title>
+    <link>https://www.prestashop.com/es/blog/segunda-venta</link>
+    <description>Tras haber realizado un usuario una primera compra en tu eCommerce, ¿sabes qué estrategia tomar de cara a conseguir la segunda venta de ese mismo cliente?</description>
+     <pubDate>Tue, 23 Jun 2020 10:56:24 +0200</pubDate>
+ <dc:creator>Jorge González Marcos</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/es/blog/segunda-venta</guid>
+  </item>
+  </channel>
+</rss>

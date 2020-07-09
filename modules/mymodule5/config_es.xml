@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>mymodule5</name>
+    <displayName><![CDATA[Mi nuevo modulo 5]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Gran modulo para prestashop]]></description>
+    <author><![CDATA[Urza]]></author>
+    <tab><![CDATA[administration]]></tab>
+	<confirmUninstall><![CDATA[¿Estas seguro que deseas desinstalar el modulo?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>
