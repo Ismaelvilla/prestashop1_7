@@ -95,9 +95,38 @@ class Mymo1 extends Module
 
         $this->context->smarty->assign('module_dir', $this->_path);
 
+        $resultadosConsulta = $this->getResults();
+        $this->context->smarty->assign('variable1', $resultadosConsulta);
+        $this->getResult2();
+
         $output = $this->context->smarty->fetch($this->local_path.'views/templates/admin/configure.tpl');
 
         return $output.$this->renderForm();
+    }
+
+    public function getResult(){
+        $sql = 'SELECT * FROM'._DB_PREFIX_.'address';
+        if($row = DB::getInstance()->getRow($sql)){
+            return $row['alias'];
+        }
+    }
+
+    public function getResults(){
+        $sql = 'SELECT * FROM '._DB_PREFIX_.'address';
+        if ($results = Db::getInstance()->ExecuteS($sql))
+            foreach ($results as $row) {
+                //echo $row['id_address'] . ' :: ' . $row['alias'] . '<br />';
+                $devolver = 'Direccion: '.$row['alias'];
+            }
+
+        return $devolver;
+    }
+
+    public function getResult2(){
+        //$sql = 'SELECT * FROM '._DB_PREFIX_.'address';
+        $sql = 'SELECT count(*) FROM '._DB_PREFIX_.'address';
+        $total = Db::getInstance()->getValue($sql);
+        echo "bienn ".$total;
     }
 
     /**

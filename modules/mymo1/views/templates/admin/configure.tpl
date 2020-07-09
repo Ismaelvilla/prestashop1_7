@@ -24,6 +24,11 @@
 *}
 
 <div class="panel">
+	<h3>Esto es mi panel</h3>
+	<p>{$variable1}</p>
+</div>
+
+<div class="panel">
 	<h3><i class="icon icon-credit-card"></i> {l s='My Mo1' mod='mymo1'}</h3>
 	<p>
 		<strong>{l s='Here is my new generic module!' mod='mymo1'}</strong><br />
