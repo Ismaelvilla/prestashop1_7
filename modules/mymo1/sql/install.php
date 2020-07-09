@@ -25,13 +25,40 @@
 */
 $sql = array();
 
-$sql[] = 'CREATE TABLE IF NOT EXISTS `' . _DB_PREFIX_ . 'mymo1` (
+
+$sql[0] = 'CREATE TABLE IF NOT EXISTS `' . _DB_PREFIX_ . 'mymo1` (
     `id_mymo1` int(11) NOT NULL AUTO_INCREMENT,
     PRIMARY KEY  (`id_mymo1`)
 ) ENGINE=' . _MYSQL_ENGINE_ . ' DEFAULT CHARSET=utf8;';
+
+$sql[1] = 'CREATE TABLE IF NOT EXISTS `' . _DB_PREFIX_ . 'mymo11` (
+    `id_mymo11` int(11) NOT NULL AUTO_INCREMENT,
+    `prueba` varchar(50) NOT NULL,
+    PRIMARY KEY  (`id_mymo11`)
+) ENGINE=' . _MYSQL_ENGINE_ . ' DEFAULT CHARSET=utf8;';
+
 
 foreach ($sql as $query) {
     if (Db::getInstance()->execute($query) == false) {
         return false;
     }
 }
+
+Db::getInstance()->insert('mymo11', array(
+    'id_mymo11' =>'2',
+    'prueba' =>'esto es una prueba'
+));
+
+/*Db::getInstance()->delete('mymo11', 'id_mymo11 = 2',1);*/
+
+$sql = 'UPDATE '. _DB_PREFIX_.'mymo11 SET prueba ="Esta modificada" WHERE id_mymo11=2';
+Db::getInstance()->execute($sql);
+
+
+/*
+Db:getInstance()->update('mymo11', array(
+    'prueba' => 'prueba actualizada'
+), 'id_mymo11 = 2',1);*/
+
+/*Db::getInstance()->delete('mymo11', 'id_mymo11 = 2',1);*/
+

@@ -299,7 +299,7 @@ class AdminContainer extends Container
 
         $a->setSQLLogger($b);
 
-        return $this->services['doctrine.dbal.default_connection'] = ${($_ = isset($this->services['doctrine.dbal.connection_factory']) ? $this->services['doctrine.dbal.connection_factory'] : ($this->services['doctrine.dbal.connection_factory'] = new \Doctrine\Bundle\DoctrineBundle\ConnectionFactory([]))) && false ?: '_'}->createConnection(['driver' => 'pdo_mysql', 'host' => 'localhost', 'port' => '', 'dbname' => 'prestashop1_7', 'user' => 'root', 'password' => '', 'charset' => 'UTF8', 'driverOptions' => [1002 => 'SET sql_mode=(SELECT REPLACE(@@sql_mode,\'ONLY_FULL_GROUP_BY\',\'\'))'], 'serverVersion' => 5.1, 'defaultTableOptions' => []], $a, new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), ['enum' => 'string']);
+        return $this->services['doctrine.dbal.default_connection'] = ${($_ = isset($this->services['doctrine.dbal.connection_factory']) ? $this->services['doctrine.dbal.connection_factory'] : ($this->services['doctrine.dbal.connection_factory'] = new \Doctrine\Bundle\DoctrineBundle\ConnectionFactory([]))) && false ?: '_'}->createConnection(['driver' => 'pdo_mysql', 'host' => 'localhost', 'port' => '', 'dbname' => 'prestashop1_7', 'user' => 'root', 'password' => '', 'charset' => 'UTF8', 'driverOptions' => [1002 => 'SET sql_mode=(SELECT REPLACE(@@sql_mode,\'ONLY_FULL_GROUP_BY\',\'\'))'], 'serverVersion' => 5.0999999999999996, 'defaultTableOptions' => []], $a, new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), ['enum' => 'string']);
     }
 
     /**
@@ -1199,6 +1199,7 @@ class AdminContainer extends Container
                 65 => 'pscleaner',
                 66 => 'mymodule4',
                 67 => 'mymodule5',
+                68 => 'mymo1',
             ],
             'ps_cache_dir' => 'F:\\wamp\\www\\prestashop1_7/var/cache/dev\\',
             'mail_themes_uri' => '/mails/themes',
