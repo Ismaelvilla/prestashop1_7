@@ -107,6 +107,8 @@ class Mymo1 extends Module
 
         $output = $this->context->smarty->fetch($this->local_path.'views/templates/admin/configure.tpl');
 
+        return $output.$this->retornarTabla();
+
         return $output.$this->renderForm();
     }
 
@@ -174,7 +176,58 @@ class Mymo1 extends Module
             'id_language' => $this->context->language->id,
         );
 
-        return $helper->generateForm(array($this->getConfigForm3()));
+
+
+        //return $helper->generateForm(array($this->getConfigForm2()));
+    }
+
+    private function retornarTabla(){
+        $resultados = Db::getInstance()->executes("SELECT * FROM "._DB_PREFIX_."category ");
+        $this->fields_list = array(
+            'id_category' => array(
+                'title' => $this->l('Id'),
+                'width' => 140,
+                'type' => 'text',
+                'filter_key' => 'sf!tipo',
+                'havingFilter' => true
+            ),
+            'id_parent' => array(
+                'title' => $this->l('Name'),
+                'width' => 140,
+                'type' => 'text',
+                'filter_key' => 'sf!tipo',
+                'havingFilter' => true
+            ),
+            'level_depth' => array(
+                'title' => $this->l("Level"),
+                'width' => 140,
+                'type' => 'text',
+                'filter_key' => 'sf!tipo',
+                'havingFilter' => true
+            )
+        );
+        $helper = new HelperList();
+
+        $helper->shopLinkType = '';
+
+        $helper->simple_header = false;
+        $helper->listTotal = count($resultados);
+
+        // Actions to be displayed in the "Actions" column
+        $helper->actions = array('edit', 'delete', 'view');
+
+        $helper->identifier = 'id_category';
+        $helper->show_toolbar = true;
+        $helper->title = 'HelperList';
+        $helper->table = $this->name.'_categories';
+        $helper->_pagination = array(10, 20, 50, 100, 200);
+
+
+        $helper->token = Tools::getAdminTokenLite('AdminModules');
+        $helper->currentIndex = AdminController::$currentIndex.'&configure='.$this->name;
+
+        return $helper->generateList($resultados, $this->fields_list);
+
     }
 
     protected function getConfigForm(){
