@@ -89,7 +89,11 @@ class Mymo1 extends Module
         /**
          * If values have been submitted in the form, process.
          */
-        if (((bool)Tools::isSubmit('submitMymo1Module')) == true) {
+       /* if (((bool)Tools::isSubmit('submitMymo1Module')) == true) {
+            $this->postProcess();
+        }*/
+        if( (Tools::isSubmit('submitMymo1Module')) == true ){
+            echo "hemos echo submit";
             $this->postProcess();
         }
 
@@ -98,8 +102,8 @@ class Mymo1 extends Module
         $resultadosConsulta = $this->getResults();
         $this->context->smarty->assign('variable1', $resultadosConsulta);
         $this->getResult2();
-        echo "Esta logueado ".$this->context->employee->isLoggedBack();
-        echo "este valor esta en la tabla configuratrion: ". Configuration::get('PS_VERSION_DB');
+       // echo "Esta logueado ".$this->context->employee->isLoggedBack();
+       // echo "este valor esta en la tabla configuratrion: ". Configuration::get('PS_VERSION_DB');
 
         $output = $this->context->smarty->fetch($this->local_path.'views/templates/admin/configure.tpl');
 
@@ -170,7 +174,7 @@ class Mymo1 extends Module
             'id_language' => $this->context->language->id,
         );
 
-        return $helper->generateForm(array($this->getConfigForm()));
+        return $helper->generateForm(array($this->getConfigForm3()));
     }
 
     protected function getConfigForm(){
@@ -348,6 +352,32 @@ class Mymo1 extends Module
         );
     }
 
+    protected function getConfigForm3()
+    {
+        return
+            $this->fields_options = array(
+                'general' => array(
+                    'title' => $this->l('Parameters'),
+                    'fields' => array(
+                        'PS_MYMODULE_OPTION1' => array(
+                            'title' => $this->l('Choose one'),
+                            'desc' => $this->l('Choose between Yes and No.'),
+                            'cast' => 'boolval',
+                            'type' => 'bool'
+                        ),
+                        'PS_MYMODULE_OPTION2' => array(
+                            'title' => $this->l('Add some text'),
+                            'desc' => $this->l('This is where you can add some text'),
+                            'cast' => 'strval',
+                            'type' => 'text',
+                            'size' => '10'
+                        )
+                    )
+                )
+            );
+
+    }
+
     /**
      * Set values for the inputs.
      */
@@ -360,10 +390,14 @@ class Mymo1 extends Module
         );
     }
 
+    public function postProcess(){
+
+    }
+
     /**
      * Save form data.
      */
-    protected function postProcess()
+    protected function postProcess2()
     {
         $form_values = $this->getConfigFormValues();
 

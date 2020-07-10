@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-07-10 13:35:42
+/* Smarty version 3.1.33, created on 2020-07-10 14:00:22
   from 'F:\wamp\www\prestashop1_7\modules\mymo1\views\templates\admin\configure.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5f08528e536e08_99602804',
+  'unifunc' => 'content_5f0858561d4fa0_86043579',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f08528e536e08_99602804 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f0858561d4fa0_86043579 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="panel">
 	<h3>Esto es mi panel</h3>
