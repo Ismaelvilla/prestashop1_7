@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-07-09 18:36:51
+/* Smarty version 3.1.33, created on 2020-07-10 12:32:10
   from 'module:pscustomersigninpscustome' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5f0747a37e48a3_16724185',
+  'unifunc' => 'content_5f0843aada4357_32816518',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f0747a37e48a3_16724185 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f0843aada4357_32816518 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin F:\wamp\www\prestashop1_7/themes/classic/modules/ps_customersignin/ps_customersignin.tpl --><div id="_desktop_user_info">
   <div class="user-info">
     <?php if ($_smarty_tpl->tpl_vars['logged']->value) {?>

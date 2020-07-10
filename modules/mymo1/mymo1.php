@@ -113,6 +113,24 @@ class Mymo1 extends Module
         }
     }
 
+    public function obtenerGeneros(){
+        $options = array();
+        $sql = 'SELECT * FROM '._DB_PREFIX_.'gender';
+        if($results = DB::getInstance()->executeS( $sql ))
+            $genero ='';
+            foreach($results as $row){
+                if($row['type'] == 0) $genero = 'hombre';
+                if($row['type'] == 1) $genero = 'mujer';
+                $options[]= array(
+                    'id_option' => (int)$row['id_gender'],
+                    'name' => $genero
+                );
+            }
+
+        var_dump($options);
+            return $options;
+    }
+
     public function getResults(){
         $sql = 'SELECT * FROM '._DB_PREFIX_.'address';
         if ($results = Db::getInstance()->ExecuteS($sql))
@@ -131,11 +149,7 @@ class Mymo1 extends Module
         echo "bienn ".$total;
     }
 
-    /**
-     * Create the form that will be displayed in the configuration of your module.
-     */
-    protected function renderForm()
-    {
+    protected function renderForm(){
         $helper = new HelperForm();
 
         $helper->show_toolbar = false;
@@ -159,10 +173,133 @@ class Mymo1 extends Module
         return $helper->generateForm(array($this->getConfigForm()));
     }
 
+    protected function getConfigForm(){
+        /*$options = array(
+            array(
+              'id_option' => '0',
+              'name'=> 'Seleccione una opcion'
+            ),
+            array(
+                'id_option' => 1,
+                'name' => 'Hombre'
+            ),
+            array(
+                'id_option' => 2,
+                'name' => 'Mujer'
+            )
+        );*/
+        $options = array();
+        $options = $this->obtenerGeneros();
+        return array(
+            'form' => array(
+                'legend' => array(
+                    'title' => $this->l('Configuraciones'),
+                    'icon' => 'icon-cogs'
+                ),
+                'input' => array(
+                    array(
+                        'type' => 'text',
+                        'name' => 'configuracion1',
+                        'label' => $this->l("Escriba Configuracion1")
+                    ),
+                    array(
+                        'col' => 3,
+                        'prefix' => '<i class="icon icon-envelope"></i>',
+                        'type' => 'text',
+                        'name' => 'email',
+                        'desc' => 'Escriba su email',
+                        'label' => 'Email'
+                    ),
+                    array(
+                        'type' => 'select',
+                        'label'=> $this->l('Sexo'),
+                        'desc' => $this->l('Seleccione Sexo'),
+                        'name' => 'sexo',
+                        'options' => array(
+                            'query' => $options,
+                            'id'=> 'id_option',
+                            'name' => 'name'
+                        )
+
+                    ),
+                    array(
+                        'type' =>'radio',
+                        'label' =>$this->l('HAbilitar esta opcion'),
+                        'desc' =>$this->l('Eres también un cliente'),
+                        'is_bool' => true,
+                        'class'     => 't',
+                        'values' => array(
+                            array(
+                                'id' => 'active_on',
+                                'value' =>1,
+                                'label'=>$this->l("es activo")
+                            ),
+                            array(
+                                'id' => 'active_off',
+                                'value' =>0,
+                                'label'=>$this->l("Disable")
+                            )
+                        )
+
+                    ),
+                    array(
+                        'type' => 'checkbox',
+                        'label' => $this->l('Options'),
+                        'desc' => $this->l('choose option'),
+                        'name' => 'options',
+                        'values' => array(
+                            'query' => $options,
+                            'id' => 'id_option',
+                            'name' => 'name'
+                        ),
+                        'expand' => array(
+                            ['print_total'] => count($options),
+                            'default' => 'show',
+                            'show' => array('text' => $this->l('show'), 'icon' => 'plus-sign-alt'),
+                            'hide' => array('text' => $this->l('hide'), 'icon' => 'minus-sign-alt')
+                        ),
+                    )
+                ),
+                'submit' => array(
+                    'title' => $this->l(' Enviar '),
+                    'class' => 'btn btn-default pull-right'
+                )
+            )
+        );
+    }
+
+    /**
+     * Create the form that will be displayed in the configuration of your module.
+     */
+    protected function renderForm2()
+    {
+        $helper = new HelperForm();
+
+        $helper->show_toolbar = false;
+        $helper->table = $this->table;
+        $helper->module = $this;
+        $helper->default_form_language = $this->context->language->id;
+        $helper->allow_employee_form_lang = Configuration::get('PS_BO_ALLOW_EMPLOYEE_FORM_LANG', 0);
+
+        $helper->identifier = $this->identifier;
+        $helper->submit_action = 'submitMymo1Module';
+        $helper->currentIndex = $this->context->link->getAdminLink('AdminModules', false)
+            .'&configure='.$this->name.'&tab_module='.$this->tab.'&module_name='.$this->name;
+        $helper->token = Tools::getAdminTokenLite('AdminModules');
+
+        $helper->tpl_vars = array(
+            'fields_value' => $this->getConfigFormValues(), /* Add values for your inputs */
+            'languages' => $this->context->controller->getLanguages(),
+            'id_language' => $this->context->language->id,
+        );
+
+        return $helper->generateForm(array($this->getConfigForm2()));
+    }
+
     /**
      * Create the structure of your form.
      */
-    protected function getConfigForm()
+    protected function getConfigForm2()
     {
         return array(
             'form' => array(
@@ -205,7 +342,7 @@ class Mymo1 extends Module
                     ),
                 ),
                 'submit' => array(
-                    'title' => $this->l('Save'),
+                    'title' => $this->l('Save')
                 ),
             ),
         );
