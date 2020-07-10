@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-07-10 14:00:19
+/* Smarty version 3.1.33, created on 2020-07-10 18:11:48
   from 'module:psemailsubscriptionviewst' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5f08585386c246_92381059',
+  'unifunc' => 'content_5f0893443908a2_42449538',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f08585386c246_92381059 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f0893443908a2_42449538 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- begin F:\wamp\www\prestashop1_7/themes/classic/modules/ps_emailsubscription/views/templates/hook/ps_emailsubscription.tpl -->
 <div class="block_newsletter col-lg-8 col-md-12 col-sm-12">
   <div class="row">

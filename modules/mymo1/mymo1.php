@@ -66,7 +66,7 @@ class Mymo1 extends Module
         include(dirname(__FILE__).'/sql/install.php');
 
         return parent::install() &&
-            $this->registerHook('header') &&
+            $this->registerHook('displayHeader') &&
             $this->registerHook('backOfficeHeader') &&
             $this->registerHook('displayLeftColumn') &&
             $this->registerHook('displayRightColumn');
@@ -94,7 +94,7 @@ class Mymo1 extends Module
         }*/
         if( (Tools::isSubmit('submitMymo1Module')) == true ){
             echo "hemos echo submit";
-            $this->postProcess();
+            $this->postProcess2();
         }
 
         $this->context->smarty->assign('module_dir', $this->_path);
@@ -107,7 +107,7 @@ class Mymo1 extends Module
 
         $output = $this->context->smarty->fetch($this->local_path.'views/templates/admin/configure.tpl');
 
-        return $output.$this->retornarTabla();
+        //return $output.$this->retornarTabla();
 
         return $output.$this->renderForm();
     }
@@ -176,9 +176,7 @@ class Mymo1 extends Module
             'id_language' => $this->context->language->id,
         );
 
-
-
-        //return $helper->generateForm(array($this->getConfigForm2()));
+        return $helper->generateForm(array($this->getConfigForm2()));
     }
 
     private function retornarTabla(){
@@ -454,6 +452,7 @@ class Mymo1 extends Module
     {
         $form_values = $this->getConfigFormValues();
 
+        //Configuration::updateValue('PS_PDF_IMG_DELIVERY', 1);
         foreach (array_keys($form_values) as $key) {
             Configuration::updateValue($key, Tools::getValue($key));
         }
@@ -481,7 +480,16 @@ class Mymo1 extends Module
 
     public function hookDisplayLeftColumn()
     {
+        $this->context->controller->registerJavascript('fichero.js', 'modules/'.$this->name.'/views/js/fichero.js',['position' => 'bottom', 'priority' => 150]);
+        $this->context->controller->registerStylesheet('fichero.css', 'modules/'.$this->name.'/views/css/fichero.css', ['media' => 'all', 'priority' => 150]);
         /* Place your code here. */
+        $this->context->smarty->assign([
+            'my_module_name' => $this->name,
+            'my_module_link' => $this->context->link->getModuleLink('mymodule5', 'display'),
+            'my_module_message' => $this->l('This is a simple text message') // Do not forget to enclose your strings in the l() translation method
+        ]);
+
+        return $this->display(__FILE__, 'mymo1.tpl');
     }
 
     public function hookDisplayRightColumn()
