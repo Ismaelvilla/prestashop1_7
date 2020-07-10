@@ -98,6 +98,8 @@ class Mymo1 extends Module
         $resultadosConsulta = $this->getResults();
         $this->context->smarty->assign('variable1', $resultadosConsulta);
         $this->getResult2();
+        echo "Esta logueado ".$this->context->employee->isLoggedBack();
+        echo "este valor esta en la tabla configuratrion: ". Configuration::get('PS_VERSION_DB');
 
         $output = $this->context->smarty->fetch($this->local_path.'views/templates/admin/configure.tpl');
 
