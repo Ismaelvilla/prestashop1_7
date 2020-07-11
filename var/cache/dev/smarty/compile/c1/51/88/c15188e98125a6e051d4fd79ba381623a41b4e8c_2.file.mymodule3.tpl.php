@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-07-10 18:11:46
+/* Smarty version 3.1.33, created on 2020-07-11 10:06:31
   from 'F:\wamp\www\prestashop1_7\modules\mymodule5\views\templates\hook\mymodule3.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5f089342ae1640_81787116',
+  'unifunc' => 'content_5f0973078b1b45_35510854',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5f089342ae1640_81787116 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5f0973078b1b45_35510854 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="block-contact">
     <h4><?php echo call_user_func_array( $_smarty_tpl->smarty->registered_plugins[Smarty::PLUGIN_FUNCTION]['l'][0], array( array('s'=>'Contact us','d'=>'Shop.Theme.Global'),$_smarty_tpl ) );?>

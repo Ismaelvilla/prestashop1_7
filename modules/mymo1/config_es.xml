@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>mymo1</name>
+    <displayName><![CDATA[My Mo1]]></displayName>
+    <version><![CDATA[1.0.0]]></version>
+    <description><![CDATA[Gran modulo para prestashop]]></description>
+    <author><![CDATA[Isma]]></author>
+    <tab><![CDATA[others]]></tab>
+	<confirmUninstall><![CDATA[Estas seguro que deseas desinstalar?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>
